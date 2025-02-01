@@ -22,7 +22,7 @@ const formattedTime = time.toLocaleTimeString([], {
 });
    
 
-  return <span>{formattedTime}</span>;
+  return <span className="font-bold">{formattedTime}</span>;
 }
 
 export default Clock;
