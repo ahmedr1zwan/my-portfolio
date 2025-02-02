@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className="flex items-center justify-between mt-12 border">
+        <div className="flex items-center justify-between">
             <div className="flex-row">
                 <div className="flex">
                     <img src="../src/assets/msgBubble.svg" className="items-center ml-60"></img>

@@ -26,17 +26,17 @@ export default function Navbar() {
     // </nav>
     
   
-    <div className="flex items-center w-full h-20 mt-8 justify-center">
+    <div className="fixed flex items-center w-full h-20 mt-8 justify-center">
       <div className="flex-none mr-60 p-2">
-        <div className="flex">
-          <div>
+        <div className="-mt-2.5 -ml-8 flex">
+          
            <Clock />
-          </div>
+        
           {/* FEATURE TO ADD: <div><img src="../src/assets/dnd.svg" alt="DnD" className="h-[1.5em] align-middle ml-2"></img></div> */}
         </div>
       </div> 
 
-      <div className="rounded-2xl w-1/4">
+      <div className="fixed rounded-2xl w-1/4">
         <div className="bg-[#4F4D4D] p-2 w-full rounded-3xl" >
             <div className="flex items-center justify-left space-x-12 ml-24 text-[#FFFFFF]">
               <div>Home</div>
@@ -46,12 +46,14 @@ export default function Navbar() {
 
             </div>
         </div>
+        
 
+      
+      </div>        
+      <div className="bg-black w-20 ml-60">
       </div>
 
-      <div className="bg-black w-20 ml-60">
-      </div>        
-
+      <p>adadda</p>
 
     </div>
 

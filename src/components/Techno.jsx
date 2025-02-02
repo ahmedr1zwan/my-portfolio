@@ -5,10 +5,10 @@ const Techno = () => {
         
         <>
         
-        <h1 className='text-4xl font-light bg-gray-50 ml-8 mt-12'>Technologies</h1>
+        <h1 className='text-5xl font-light ml-8 mt-12'>Technologies</h1>
         
 
-        <div className="flex bg-gray-50 p-8 text-gray-800">
+        <div className="flex mt-2 p-8 text-gray-800">
         {/* Heading */}
         
         
@@ -88,7 +88,7 @@ const Techno = () => {
         {/* Callout with arrow (positioned to the right) */}
         <div className="flex relative">
             <img src="./src/icons/arrow.svg"></img>
-            <p className='mt-16 -ml-8 w-48 text-center'>I have worked with these before however I’m always open to learn more!</p>
+            <p className='text-xl mt-16 -ml-8 w-64 text-center'>I have worked with these before however I'm always open to learn more!</p>
           
         </div>
       </div>
