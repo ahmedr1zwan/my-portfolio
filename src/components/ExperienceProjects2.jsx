@@ -59,8 +59,8 @@ function ExperienceProjects2() {
       {activeTab === "experience" && (
         <div className="space-y-4">
           {experiences.map((exp, index) => (
-            <div key={index} className="p-4 border rounded bg-white shadow-sm">
-              <h3 className="font-bold text-xl">{exp.company}</h3>
+            <div key={index} className="p-4 border bg-white ">
+              <h3 className="font-bold text-2xl">{exp.company}</h3>
               <p>{exp.role}</p>
               <p className="text-sm text-gray-500">{exp.years}</p>
             </div>
@@ -71,7 +71,7 @@ function ExperienceProjects2() {
       {activeTab === "projects" && (
         <div className="space-y-4">
           {projects.map((proj, index) => (
-            <div key={index} className="border rounded-lg p-4 shadow-sm bg-white">
+            <div key={index} className="rounded-lg p-4 bg-white">
               <h3 className="font-bold text-xl mb-2">{proj.name}</h3>
               <p className="text-gray-700">{proj.description}</p>
 

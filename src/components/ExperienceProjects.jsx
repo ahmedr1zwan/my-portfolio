@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import ReactMarkdown from 'react-markdown';
 import { FiExternalLink } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
 
 function ExperienceProjects() {
     const [activeTab, setActiveTab] = useState('experience');
@@ -13,9 +15,16 @@ function ExperienceProjects() {
     // Each project includes name, description, technologies, and a link
     const projects = [
       {
-        name: "Project Alpha",
-        description: "Description for Project Alpha",
-        technologies: ["React", "Tailwind CSS", "Node.js"],
+        name: "SlideFlow - AI Presentation Controller",
+        description: `SlideFlow is an innovative AI-powered presentation tool designed to enhance the presenting experience with voice-controlled slide navigation, real-time transcription, and interactive audience engagement.
+
+- 🔹 **Voice-Controlled Navigation** - Seamlessly switch slides using voice commands, eliminating the need for a physical clicker.
+- 🔹 **Real-Time Transcription** - Automatically generate subtitles for better accessibility and audience comprehension.
+- 🔹 **Smart Interaction** - Integrated voice search and image recognition using the Web Speech API, Google Cloud Vision API, and Sentence-BERT, allowing presenters to retrieve content dynamically.
+
+Built with **React** and **Tailwind CSS** for a smooth and responsive frontend, SlideFlow is powered by a **Flask** backend that processes AI-driven functionalities, ensuring an intuitive and engaging presentation experience.
+`,
+        technologies: ["React", "Tailwind CSS", "Flask", "Computer Vision", "Google Cloud Vision API", "Sentence-BERT", "Web Speech API"],
         link: "https://github.com/username/project-alpha",
       },
       {
@@ -28,7 +37,7 @@ function ExperienceProjects() {
 
   return (
     <div>
-        <div className="flex">
+        <div className="flex gap-1">
             <div>
                 <button onClick={() => setActiveTab("experience")}
                 className={`px-4 py-2 rounded-3xl border-2 border-[#0071e3] 
@@ -76,15 +85,16 @@ function ExperienceProjects() {
       {/* Projects */}
 
       {activeTab === "projects" && (
-        <div className="space-y-4">
+        <div className="space-y-2 mt-2">
           {projects.map((proj, index) => (
-            <div key={index} className="border rounded-lg p-4 shadow-sm bg-white">
-              <h3 className="font-bold text-xl mb-2">{proj.name}</h3>
-              <p className="text-gray-700">{proj.description}</p>
+            <div key={index} className="p-4 bg-gray-400">
+              <h3 className="font-bold text-2xl mb-2">{proj.name}</h3>
+            <ReactMarkdown className="text-gray-700 text-xl">
+                {proj.description}
+            </ReactMarkdown>
 
               {/* Technologies used at the bottom */}
               <div className="mt-3">
-                <h4 className="text-sm font-semibold">Technologies:</h4>
                 <ul className="flex flex-wrap gap-2 mt-1">
                   {proj.technologies.map((tech) => (
                     <li
@@ -99,16 +109,16 @@ function ExperienceProjects() {
 
               {/* Icon linking to the project */}
               {proj.link && 
-              <div className="mt-4">
+              <div className="flex mt-4 gap-2">
                 <a
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-500 hover:text-blue-700"
                 >
-                  <FiExternalLink className="mr-1" />
-                  View Project
+                  <FiExternalLink className="mr-1 size-7" />
                 </a>
+                <a> <FaGithub className="size-7"/></a>
               </div>}
             </div>
           ))}

@@ -26,9 +26,9 @@ export default function Navbar() {
     // </nav>
     
   
-    <div className="fixed flex items-center w-full h-20 mt-8 justify-center">
+    <div className="fixed flex items-center w-full h-20  justify-center">
       <div className="flex-none mr-60 p-2">
-        <div className="-mt-2.5 -ml-8 flex">
+        <div className="flex">
           
            <Clock />
         
@@ -53,7 +53,9 @@ export default function Navbar() {
       <div className="bg-black w-20 ml-60">
       </div>
 
-      <p>adadda</p>
+      <div>
+        <img src="./src/icons/network.svg" className="h-6 ml-7 mt-1"></img>
+      </div>
 
     </div>
 

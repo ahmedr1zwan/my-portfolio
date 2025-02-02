@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div className="flex items-center justify-between">
-            <div className="flex-row">
+            <div className="flex-row mt-20">
                 <div className="flex">
                     <img src="../src/assets/msgBubble.svg" className="items-center ml-60"></img>
                     <div className="flex w-16 ml-20">
@@ -20,7 +20,7 @@ const Home = () => {
 
          
 
-            <div className='flex mr-40'>
+            <div className='flex mr-40 mt-20'>
                 <div className='mt-64'>
                     <div className='flex space-x-2'>
                         <img src="../src/assets/github.svg"></img>

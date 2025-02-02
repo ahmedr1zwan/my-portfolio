@@ -13,7 +13,6 @@ function App() {
     <Home />
     <Techno />
     <ExperienceProjects />
-    <ExperienceProjects2 />
     </>
   )
 }
