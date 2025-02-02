@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="bg-[#4F4D4D] p-2 w-full rounded-3xl" >
             <div className="flex items-center justify-left space-x-12 ml-24 text-[#FFFFFF]">
               <div>Home</div>
-              <div>About</div>
+              <a href="#about">About</a>
               <div>Projects</div>
               <div className="bg-[#000000] w-1/5 ml-14 rounded-3xl h-6"></div>
 

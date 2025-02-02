@@ -1,0 +1,99 @@
+import React from 'react';
+
+const Techno = () => {
+    return (
+        
+        <>
+        
+        <h1 className='text-4xl font-light bg-gray-50 ml-8 mt-12'>Technologies</h1>
+        
+
+        <div className="flex bg-gray-50 p-8 text-gray-800">
+        {/* Heading */}
+        
+        
+        {/* Icons row */}
+            <div className="flex-row items-center">
+            {/* Replace src paths with your actual icon files */}
+            <div className="flex gap-4">
+                    <img
+                    src="./src/icons/html15.svg"
+                    alt="HTML5"
+                    className="h-24 w-auto"
+                    />
+                    <img
+                    src="./src/icons/css3.svg"
+                    alt="CSS3"
+                    className="h-24 w-auto"
+                    />
+                    <img
+                    src="./src/icons/react.svg"
+                    alt="React"
+                    className="h-24 w-auto"
+                    />
+                    <img
+                    src="./src/icons/tailwind.svg"
+                    alt="Tailwind CSS"
+                    className="h-24 w-auto"
+                    />
+                    <img
+                    src="./src/icons/node.svg"
+                    alt="Node.js"
+                    className="h-24 w-auto"
+                    />
+                    <img
+                    src="./src/icons/nextjs.svg"
+                    alt="Next.js"
+                    className="h-24 w-auto"
+                    />
+                    
+            </div>
+            
+            <div className="flex gap-5 mt-3">
+                <img
+                    src="./src/icons/python.svg"
+                    alt="Python"
+                    className="h-24 w-auto"
+                />
+                <img
+                    src="./src/icons/java.svg"
+                    alt="Java"
+                    className="h-24 w-auto"
+                />
+                <img
+                    src="./src/icons/javascript.svg"
+                    alt="JavaScript"
+                    className="h-24 w-auto"
+                />
+                <img
+                    src="./src/icons/sql.svg"
+                    alt="SQL"
+                    className="h-24 w-auto"
+                />
+                <img
+                    src="./src/icons/mongodb.svg"
+                    alt="MongoDB"
+                    className="h-24 w-auto"
+                />
+                <img
+                    src="./src/icons/aws.svg"
+                    alt="AWS"
+                    className="h-24 w-auto"
+                />
+
+            </div>
+            
+            </div>
+  
+        {/* Callout with arrow (positioned to the right) */}
+        <div className="flex relative">
+            <img src="./src/icons/arrow.svg"></img>
+            <p className='mt-16 -ml-8 w-48 text-center'>I have worked with these before however I’m always open to learn more!</p>
+          
+        </div>
+      </div>
+      </>
+    );
+};
+
+export default Techno;
