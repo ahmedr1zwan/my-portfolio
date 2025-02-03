@@ -8,27 +8,27 @@ function ExperienceProjects() {
 
     // Sample data (replace with your real data)
     const experiences = [
-      { company: "Queen's University Web Development Club", role: "Full Stack Developer (Team Lead)", years: "Jan. 25 - Present", 
+      { company: "Queen's University Web Development Club", role: "Full Stack Developer (Team Lead)", years: "Jan. 2025 - Present", 
       description:`Leading a team of developers to build a scalable, user-focused web application while managing project timelines and technical development.  
       
 - 🔹 **Team Leadership** - Managing a team of 5 developers, delegating tasks, and ensuring smooth collaboration.  
 - 🔹 **Technical Development** - Implementing a full-stack solution using **React.js, Tailwind CSS, Node.js, and MongoDB**.  
 - 🔹 **Client Collaboration** - Working directly with clients to define project goals and deliver user-centric features.`,
-logo: "./src/icons/qweb.svg" },
-      { company: "Queen's University (Residence Life & Services)", role: "Residence Don", years: "2023 - Present", 
+logo: "/icons/qweb.svg" },
+      { company: "Queen's University (Residence Life & Services)", role: "Residence Don", years: "Sept. 2023 - Present", 
       description: `Supporting and mentoring university students by fostering a welcoming, inclusive, and engaged residence community.  
 
 - 🔹 **Community Leadership** - Managed a diverse group of students, promoting collaboration and communication.  
 - 🔹 **Event Coordination** - Organized activities that encouraged teamwork, problem-solving, and student engagement.  
 - 🔹 **Conflict Resolution**  -  Facilitated a supportive living environment by addressing concerns and ensuring inclusivity.`,
-logo: "./src/icons/queens.svg" },
+logo: "/icons/queens.svg" },
       { company: "Queen's Data Analytics Association", role: "Data Analyst", years: "Sept. 2024 - Dec. 2024", 
       description: `Extracting insights from data to drive decision-making and enhance analytical projects at Queen’s Data Analytics Association.  
 
 - 🔹 **Data Analysis & Interpretation** - Analyzing datasets to uncover trends and provide actionable insights.  
 - 🔹 **Programming & Automation** - Utilizing **Python and SQL** to develop efficient, data-driven solutions.  
 - 🔹 **Continuous Learning** - Expanding expertise in **machine learning** and advanced analytics through tutorials and workshops.  `,
-logo: "./src/icons/qdaa.svg" },
+logo: "/icons/qdaa.svg" },
     ];
   
     // Each project includes name, description, technologies, and a link

@@ -54,7 +54,7 @@ export default function Navbar() {
       </div>
 
       <div>
-        <img src="./src/icons/network.svg" className="h-6 ml-7 mt-1"></img>
+        <img src="/icons/network.svg" className="h-6 ml-7 mt-1"></img>
       </div>
 
     </div>
