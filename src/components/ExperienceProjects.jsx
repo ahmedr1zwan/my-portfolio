@@ -4,7 +4,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
 
 function ExperienceProjects() {
-    const [activeTab, setActiveTab] = useState('experience');
+    const [activeTab, setActiveTab] = useState('projects');
 
     // Sample data (replace with your real data)
     const experiences = [

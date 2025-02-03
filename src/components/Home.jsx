@@ -25,11 +25,11 @@ const Home = () => {
                 <div className='mt-64'>
                     <div className='flex space-x-2'>
                         <img src="/assets/github.svg"></img>
-                        <a href="https://github.com/ahmedr1zwan">GitHub Link</a>
+                        <a href="https://github.com/ahmedr1zwan" className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black">GitHub Link</a>
                     </div>
                     <div className='flex space-x-2'>
                         <img src="/assets/linkedin.svg"></img>
-                        <a href="https://www.linkedin.com/in/ahmed-rizwan1/">LinkedIn Link</a>
+                        <a href="https://www.linkedin.com/in/ahmed-rizwan1/" className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black">LinkedIn Link</a>
                     </div>
                     <div className='flex space-x-2'>
                         <img src="/assets/mail.svg"></img>
