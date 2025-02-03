@@ -39,9 +39,9 @@ export default function Navbar() {
       <div className="fixed rounded-2xl w-1/4">
         <div className="bg-[#4F4D4D] p-2 w-full rounded-3xl" >
             <div className="flex items-center justify-left space-x-12 ml-24 text-[#FFFFFF]">
-              <div>Home</div>
-              <a href="#about">About</a>
-              <div>Projects</div>
+              <a href="#home">Home</a>
+              <a href="#info">About</a>
+              <a href="#info">Projects</a>
               <div className="bg-[#000000] w-1/5 ml-14 rounded-3xl h-6"></div>
 
             </div>

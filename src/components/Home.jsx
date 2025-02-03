@@ -1,8 +1,9 @@
 import React from 'react';
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
     return (
-        <div className="flex items-center justify-between">
+        <div id="home" className="flex items-center justify-between">
             <div className="flex-row mt-20">
                 <div className="flex">
                     <img src="../src/assets/msgBubble.svg" className="items-center ml-60"></img>
@@ -12,9 +13,9 @@ const Home = () => {
                     </div>
                 </div>
                 
-                <div className='mt-20 ml-20 text-2xl'>
-                    <p>I am specializing in AI. I have a passion for learning new technologies and making projects.</p>
-                    <p> I have been part of several student clubs where I have gained valuable experience.</p>
+                <div className='mt-20 ml-20 text-2xl w-2/3'>
+                    <ReactTyped strings={["I am specializing in AI. I have a passion for learning new technologies and making projects. I have been part of several student clubs where I have gained valuable experience."]} typeSpeed={20} />
+                    {/* <p> I have been part of several student clubs where I have gained valuable experience.</p> */}
                 </div>
             </div>
 
@@ -37,7 +38,7 @@ const Home = () => {
                     
     
                 </div>
-                <img src="../src/assets/ahmed.svg" alt="Ahmed's Picture" className="mr-auto"></img>
+                <img src="../src/assets/ahmed.svg" alt="Ahmed's Picture" className="mr-20"></img>
                 <div>
 
                 </div>

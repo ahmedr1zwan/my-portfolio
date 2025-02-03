@@ -3,7 +3,7 @@ import React from 'react';
 const Techno = () => {
     return (
         
-        <div className='p-3 ml-8'>
+        <div className='ml-8'>
         
             <h1 className='text-5xl font-light ml-12 mt-12'>Technologies</h1>
             
