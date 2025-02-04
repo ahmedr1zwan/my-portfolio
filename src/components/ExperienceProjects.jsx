@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ReactMarkdown from 'react-markdown';
 import { FiExternalLink } from 'react-icons/fi';
-import { FaGithub } from 'react-icons/fa';
+// import { FaGithub } from 'react-icons/fa';
 
 function ExperienceProjects() {
-    const [activeTab, setActiveTab] = useState('projects');
+    const [activeTab, setActiveTab] = useState('experience');
 
     // Sample data (replace with your real data)
     const experiences = [
@@ -56,125 +56,122 @@ logo: "/icons/qdaa.svg" },
         link: "https://github.com/ahmedr1zwan/pharmacy-management",
       }, 
     ];
+    return (
+      <div id="info" className="py-6 mt-4">
+      {/* Tab buttons */}
+      <div className="flex justify-center gap-1 mb-6">
+        <button
+          onClick={() => setActiveTab("experience")}
+          className={`px-4 py-2 rounded-3xl border-2 border-[#0071e3]
+            ${
+              activeTab === "experience"
+                ? "bg-[#0071e3] text-white"
+                : "bg-transparent text-[#0071e3]"
+            }
+            hover:bg-[#0071e3] hover:text-white`}
+        >
+          Experience
+        </button>
+        <button
+          onClick={() => setActiveTab("projects")}
+          className={`px-4 py-2 rounded-3xl border-2 border-[#0071e3]
+            ${
+              activeTab === "projects"
+                ? "bg-[#0071e3] text-white"
+                : "bg-transparent text-[#0071e3]"
+            }
+            hover:bg-[#0071e3] hover:text-white`}
+        >
+          Projects
+        </button>
+      </div>
 
-  return (
-    <div id="info">
-        <div className="flex p-6 gap-1">
-            <div>
-                <button onClick={() => setActiveTab("experience")}
-                className={`px-4 py-2 rounded-3xl border-2 border-[#0071e3] 
-                ${
-                    activeTab === "experience"
-                    ?  'bg-[#0071e3] text-white hover:bg-[#0071e3] hover:text-white'
-                    : 'bg-transparent text-[#0071e3] hover:bg-[#0071e3] hover:text-white'
-
-                }`}
-
-                >
-                Experience</button>
-            </div>
-            <div>
-                <button onClick={() => setActiveTab("projects")}
-                className={`px-4 py-2 rounded-3xl border-2 border-[#0071e3] 
-                ${
-                    activeTab === "projects"
-                    ?  "bg-[#0071e3] text-white hover:bg-[#0071e3] hover:text-white"
-                    : "bg-transparent text-[#0071e3] hover:bg-[#0071e3] hover:text-white"
-
-                }`}
-
-                >
-                Projects</button>
-            </div>
-        
-
-        </div>
-        
-        {/* Tab Content: EXPERIENCE */}
-
+      {/* Tab content container: center and limit width */}
+      <div className="max-w-4xl mx-auto px-4">
+        {/* EXPERIENCE TAB */}
         {activeTab === "experience" && (
-        <div className="flex-row w-2/3 ml-20">
-          {experiences.map((exp, index) => (
-            <div className="flex border p-6 rounded-xl shadow-xl mb-4">
-              <div key={index} className="w-2/3">
-                <h3 className="font-bold text-3xl">{exp.company}</h3>
-                <p className="text-2xl font-semibold">{exp.role}</p>
-                <p className="text-xl text-gray-500">{exp.years}</p>
-                <p><ReactMarkdown className="text-gray-700 text-xl">
-                  {exp.description}
-                </ReactMarkdown></p>
-                
-              </div>
-              <div className="flex justify-center ml-20 w-60">
-                <img src={exp.logo} alt="logo"></img> 
-              </div>
-
-              
-            </div>
-          ))}
-        </div>
-        
-
-     
-      )}
-
-      {/* Projects */}
-
-      {activeTab === "projects" && (
-        <div className="">
-          {projects.map((proj, index) => (
-            <div className="mb-4">
-            
-              <div key={index} className="w-2/3 ml-20 p-6 border rounded-xl shadow-xl">
-                <h3 className="font-bold text-2xl">{proj.name}</h3>
-              <ReactMarkdown className="text-gray-700 text-xl">
-                  {proj.description}
-              </ReactMarkdown>
-
-                {/* Technologies used at the bottom */}
-                <div className="mt-3">
-                  <ul className="flex flex-wrap gap-2 mt-1">
-                    {proj.technologies.map((tech) => (
-                      <li
-                        key={tech}
-                        className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs"
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
+          <div>
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-start p-6 border border-black rounded-xl shadow-xl mb-6"
+              >
+                {/* Left: Company info */}
+                <div className="md:w-2/3">
+                  <h3 className="font-bold text-2xl md:text-3xl mb-1">
+                    {exp.company}
+                  </h3>
+                  <p className="text-xl md:text-2xl font-semibold mb-1">
+                    {exp.role}
+                  </p>
+                  <p className="text-base md:text-xl text-gray-500 mb-1">
+                    {exp.years}
+                  </p>
+                  <ReactMarkdown className="text-gray-900 text-base md:text-lg leading-relaxed">
+                    {exp.description}
+                  </ReactMarkdown>
                 </div>
 
-                {/* Icon linking to the project */}
-                {proj.link && 
-                <div className="flex gap-2 ">
+                {/* Right: Logo */}
+                <div className="mt-4 md:mt-0 md:ml-auto flex-shrink-0 flex justify-center items-center">
+                  <img
+                    src={exp.logo}
+                    alt="logo"
+                    className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* PROJECTS TAB */}
+        {activeTab === "projects" && (
+          <div>
+            {projects.map((proj, index) => (
+              <div
+                key={index}
+                className="p-6 border border-black rounded-xl shadow-xl mb-6"
+              >
+                <h3 className="font-bold text-xl md:text-2xl mb-2">
+                  {proj.name}
+                </h3>
+                <ReactMarkdown className="text-gray-900 text-base md:text-lg leading-relaxed mb-3">
+                  {proj.description}
+                </ReactMarkdown>
+
+                {/* Technologies used */}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {proj.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Project link */}
+                {proj.link && (
                   <a
                     href={proj.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-500 hover:text-blue-700"
                   >
-                    <FiExternalLink className="mr-1 size-7 mt-2" />
+                    <FiExternalLink className="mr-1" />
+                    View Project
                   </a>
-                  {/* <a> <FaGithub className="size-7"/></a> */}
-                </div>}
+                )}
               </div>
+            ))}
           </div>
-          ))}
-        </div>
-      )}
-
-    
-
-
-
-
-
-
+        )}
+      </div>
     </div>
-    
 
-  );
-}
+    );
+                }
 
 export default ExperienceProjects;
