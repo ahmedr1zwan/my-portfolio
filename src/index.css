@@ -1,6 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-white text-apple-gray-900;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add scroll margin to sections to account for fixed navbar */
+  #home, #technologies, #experience, #projects {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-apple;
+  }
+  
+  .glass-dark {
+    @apply bg-apple-gray-900/80 backdrop-blur-apple;
+  }
+}
 

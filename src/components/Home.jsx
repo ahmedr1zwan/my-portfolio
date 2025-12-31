@@ -1,75 +1,63 @@
 import React from "react";
-import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
     <div
       id="home"
-      // Outer container: stack on mobile, row on large
-      className="flex flex-col lg:flex-row lg:items-center lg:justify-between
-                 px-4 py-10"
+      className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-start px-6 lg:px-12 pt-24 pb-4 max-w-7xl mx-auto gap-8 lg:gap-12"
     >
-      {/* Left block: Bubble + Emojis + Typed text */}
-      <div className="flex-col items-center lg:flex-row mt-10 lg:mt-20 w-full lg:w-2/3">
-        
-        {/* Bubble + Emojis Row */}
-        <div className="flex flex-col items-center lg:flex-row lg:items-center">
-          <img
-            src="/assets/msgBubble.svg"
-            alt="Message Bubble"
-            // On large screens, push it right if needed
-            className="mb-4 lg:mb-4 lg:ml-40"
-          />
-          <div className="flex gap-2 lg:ml-5">
-            <img src="/assets/smileEmoji.svg" alt="Smile Emoji" />
-            <img src="/assets/waveEmoji.svg" alt="Wave Emoji" />
-          </div>
+      {/* Left section: Content */}
+      <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
+        <div className="space-y-4">
+          <p className="text-sm font-medium text-apple-gray-500 tracking-wide">
+            Computer Science '27 @ Queen's University | Kingston, Ontario
+          </p>
+          
+          <h1 className="text-5xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 leading-tight">
+            Ahmed Rizwan
+          </h1>
+          
+          <p className="text-lg lg:text-xl text-apple-gray-600 leading-relaxed max-w-2xl">
+            Exploring applied AI and full-stack development through hands-on projects and real-world experience.
+          </p>
         </div>
 
-        {/* Typed Text */}
-        <div className="mt-12 lg:mt-0 lg:ml-20 text-2xl w-3/4 text-justify lg:text-left">
-            <ReactTyped strings={["I am specializing in AI. I have a passion for learning new technologies and making projects. I have been part of several student clubs where I have gained valuable experience."]} typeSpeed={20} />
+        {/* Social Links */}
+        <div className="flex flex-wrap items-center gap-4 pt-2">
+          <a
+            href="https://github.com/ahmedr1zwan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-apple-gray-700 hover:text-apple-gray-900 transition-colors"
+          >
+            <img src="/assets/github.svg" alt="GitHub" className="w-5 h-5" />
+            <span className="text-sm font-medium">GitHub</span>
+          </a>
+          
+          <a
+            href="https://www.linkedin.com/in/ahmed-rizwan1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-apple-gray-700 hover:text-apple-gray-900 transition-colors"
+          >
+            <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+            <span className="text-sm font-medium">LinkedIn</span>
+          </a>
+          
+          <div className="flex items-center gap-2 text-apple-gray-600">
+            <img src="/assets/mail.svg" alt="Email" className="w-5 h-5" />
+            <span className="text-sm">ahmed.rizwan@queensu.ca</span>
+          </div>
         </div>
       </div>
 
-      {/* Right block: Links + Picture */}
-      <div className="flex flex-col items-center gap-4 mt-8 lg:mt-20
-                      lg:flex-row lg:justify-between lg:ml-10 lg:mr-40"
-      >
-        {/* Links */}
-        <div className="mt-4 lg:mt-64 text-center lg:text-left">
-          <div className="flex items-center gap-2 mb-2">
-            <img src="/assets/github.svg" alt="GitHub" />
-            <a
-              href="https://github.com/ahmedr1zwan"
-              className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black"
-            >
-              GitHub Link
-            </a>
-          </div>
-          <div className="flex items-center gap-2 mb-2">
-            <img src="/assets/linkedin.svg" alt="LinkedIn" />
-            <a
-              href="https://www.linkedin.com/in/ahmed-rizwan1/"
-              className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black"
-            >
-              LinkedIn Link
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <img src="/assets/mail.svg" alt="Email" />
-            <p className="text-gray-600">ahmed.rizwan@queensu.ca</p>
-          </div>
-        </div>
-
-        {/* Profile Picture */}
-        <div className="mt-2">
-          <img
-            src="/assets/ahmed.svg"
-            alt="Ahmed's Picture"
-            className="w-64 h-auto md:w-72 lg:w-80 xl:w-80 2xl:w-96 lg:mr-20"
-          />
-        </div>
+      {/* Right section: Profile Picture */}
+      <div className="w-full lg:w-auto flex justify-center lg:justify-start mt-4 lg:mt-8">
+        <img
+          src="/assets/ahmed_2.svg"
+          alt="Ahmed Rizwan"
+          className="w-56 h-auto md:w-72 lg:w-80"
+        />
       </div>
     </div>
   );
