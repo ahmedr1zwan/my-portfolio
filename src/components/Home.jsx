@@ -1,4 +1,4 @@
-import React from "react";
+import PixelMesh from "./PixelMesh";
 
 const Home = () => {
   return (
@@ -8,17 +8,14 @@ const Home = () => {
     >
       {/* Left section: Content */}
       <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
-        <div className="space-y-4">
-          <p className="text-sm font-medium text-apple-gray-500 tracking-wide">
-            Computer Science '27 @ Queen's University | Kingston, Ontario
-          </p>
-          
-          <h1 className="text-5xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 leading-tight">
+        <div className="about-intro space-y-4">
+          <PixelMesh />
+          <h1 className="relative text-5xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 leading-tight">
             Ahmed Rizwan
           </h1>
           
-          <p className="text-lg lg:text-xl text-apple-gray-600 leading-relaxed max-w-2xl">
-            Exploring applied AI and full-stack development through hands-on projects and real-world experience.
+          <p className="relative text-lg lg:text-xl text-apple-gray-700 leading-relaxed max-w-2xl">
+            I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at Intact.
           </p>
         </div>
 
@@ -44,9 +41,20 @@ const Home = () => {
             <span className="text-sm font-medium">LinkedIn</span>
           </a>
           
-          <div className="flex items-center gap-2 text-apple-gray-600">
+          <a href="mailto:ahmed.rizwan@queensu.ca" className="flex items-center gap-2 text-apple-gray-600 hover:text-apple-gray-900 transition-colors">
             <img src="/assets/mail.svg" alt="Email" className="w-5 h-5" />
             <span className="text-sm">ahmed.rizwan@queensu.ca</span>
+          </a>
+        </div>
+        <div className="border-t border-apple-gray-200 pt-5 flex items-start sm:items-center gap-4">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl bg-apple-gray-50 p-3 flex items-center justify-center">
+            <img src="/icons/queens.svg" alt="Queen’s University logo" className="w-full h-full object-contain" />
+          </div>
+          <div className="min-w-0 space-y-1">
+            <h2 className="text-sm font-semibold text-apple-gray-900">Education</h2>
+            <p className="text-sm text-apple-gray-700">Queen’s University · Bachelor of Computing (Hons.)</p>
+            <p className="text-sm text-apple-gray-600">Computer Science, AI Specialization · Kingston, ON</p>
+            <p className="text-sm text-apple-gray-600">Sept. 2022 – Apr. 2027 (expected)</p>
           </div>
         </div>
       </div>
@@ -64,60 +72,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-// LEGACY CODE
-
-// import React from 'react';
-// import { ReactTyped } from "react-typed";
-
-// const Home = () => {
-//     return (
-//         <div id="home" className="flex-row lg:flex lg:items-center lg:justify-between">
-//             <div className="flex-col lg:flex-row mt-20 w-2/3">
-//                 <div className="flex">
-//                     <img src="/assets/msgBubble.svg" className="items-center lg:ml-40"></img>
-//                     <div className="flex lg:w-16 lg:ml-20">
-//                         <img src="/assets/smileEmoji.svg"></img>
-//                         <img src="/assets/waveEmoji.svg"></img>
-//                     </div>
-//                 </div>
-                
-//                 <div className='mt-10 lg:ml-20 text-2xl w-full'>
-//                     <ReactTyped strings={["I am specializing in AI. I have a passion for learning new technologies and making projects. I have been part of several student clubs where I have gained valuable experience."]} typeSpeed={20} />
-//                     {/* <p> I have been part of several student clubs where I have gained valuable experience.</p> */}
-//                 </div>
-//             </div>
-
-         
-
-//             <div className='flex-row lg:flex lg:justify-between lg:ml-10 lg:mr-40 lg:mt-20'>
-//                 <div className='mt-4 lg:mt-64'>
-//                     <div className='flex space-x-2'>
-//                         <img src="/assets/github.svg"></img>
-//                         <a href="https://github.com/ahmedr1zwan" className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black">GitHub Link</a>
-//                     </div>
-//                     <div className='flex space-x-2'>
-//                         <img src="/assets/linkedin.svg"></img>
-//                         <a href="https://www.linkedin.com/in/ahmed-rizwan1/" className="text-blue-800 font-semibold hover:bg-yellow-200 hover:text-black">LinkedIn Link</a>
-//                     </div>
-//                     <div className='flex space-x-2'>
-//                         <img src="/assets/mail.svg"></img>
-//                         <p className="text-gray-600">ahmed.rizwan@queensu.ca</p>
-//                     </div>
-                    
-    
-//                 </div>
-                
-//                 <div className='mt-2'>
-//                     <img src="/assets/ahmed.svg" alt="Ahmed's Picture" className="w-56 h-auto md:w-48 lg:w-64 xl:w-80 2xl:w-96 lg:mr-20"></img>
-//                 </div>
-//             </div>
-        
-
-//         </div>
-//     );
-// };
-
-// export default Home;

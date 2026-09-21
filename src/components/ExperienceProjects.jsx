@@ -1,101 +1,91 @@
-import React from "react";
 import ReactMarkdown from 'react-markdown';
 import { FiExternalLink } from 'react-icons/fi';
 
 function ExperienceProjects() {
 
     const experiences = [
-      { 
-        company: "Intact Financial Corporation", 
-        role: "IT Architect I (Co-op)", 
-        years: "May 2025 – Present", 
+      {
+        company: "Intact",
+        role: "Software Developer Intern – Enterprise Architecture",
+        years: "May 2025 – Aug. 2026",
         location: "Toronto, ON",
-        description: `Working as an IT Architect to maintain and enhance enterprise architecture artifacts while developing AI-powered solutions to improve system visibility and accessibility.
+        description: `Owned the design and delivery of an internal platform built with **React, TypeScript, Python, and PostgreSQL**, helping architects and engineers search and visualize metadata across **1,000+ enterprise systems**.
 
-- 🔹 **Enterprise Architecture Management** - Maintained and enhanced 500+ enterprise architecture artifacts across 10+ business domains within a centralized repository, improving system visibility, consistency, and traceability for stakeholders.
-
-- 🔹 **AI Innovation** - Led an AI proof-of-concept using **Gemini and Vertex AI Studio** to build a conversational knowledge base over the enterprise architecture repository, enabling natural-language discovery of systems, dependencies, and documentation.
-
-- 🔹 **Process Automation** - Developed **Python-based automations** and **Power Automate workflows** to clean, validate, and de-duplicate architectural data, reducing manual maintenance effort by roughly 40%.`,
-        logo: "/icons/intact_logo.svg" 
+- Built REST APIs and asynchronous pipelines with validation, caching, and error handling, cutting cross-system synchronization time by **70%**.
+- Architected and presented a **Gemini and Vertex AI** proof-of-concept for natural-language discovery of systems and dependencies.
+- Automated testing and CI/CD with Docker and added structured logging, improving reliability for features adopted by **100+ internal users**.`,
+        logo: "/icons/intact_logo.svg"
       },
-      { 
-        company: "QWeb (Queen's Web Development Club)", 
-        role: "Full-Stack Developer", 
-        years: "Jan. 2025 – Apr. 2025", 
+      {
+        company: "QWeb (Queen’s Web Development Club)",
+        role: "Full-Stack Developer, Team Lead",
+        years: "Oct. 2024 – Apr. 2025",
         location: "Kingston, ON",
-        description: `Developing scalable full-stack web applications using modern technologies while optimizing performance and building robust backend services.
+        description: `Led developers and designers through a multi-month client engagement, owning technical direction and coordinating delivery of a full-stack web application.
 
-- 🔹 **Full-Stack Development** - Developed a scalable full-stack web application using **Next.js, Tailwind CSS**, and a **Go-based backend** to handle core business logic and API services.
-
-- 🔹 **Backend Architecture** - Designed and implemented **RESTful APIs in Go**, integrating with **MongoDB** for data persistence, indexing, and efficient querying.
-
-- 🔹 **Performance Optimization** - Improved backend response times around **20%** by optimizing API handlers, database queries, and data models.`,
-        logo: "/icons/qweb.svg" 
+- Built the frontend in **Next.js** and **Go REST APIs** backed by **MongoDB**, with validation, indexing, and error handling.
+- Improved API response times by approximately **20%** through query optimization and backend refactoring, and established Git workflows and code reviews.`,
+        logo: "/icons/qweb.svg"
       },
-      { 
-        company: "Queen's University (Residence Life & Services)", 
-        role: "Residence Don", 
-        years: "Sept. 2023 – Apr. 2025", 
+      {
+        company: "Queen’s University",
+        role: "Residence Don (Residence Advisor)",
+        years: "Sept. 2023 – Apr. 2025",
         location: "Kingston, ON",
-        description: `Supporting and mentoring university students by fostering a welcoming, inclusive, and engaged residence community.  
-
-- 🔹 **Community Leadership** - Managed a diverse group of students, promoting collaboration and communication.  
-- 🔹 **Event Coordination** - Organized activities that encouraged teamwork, problem-solving, and student engagement.  
-- 🔹 **Conflict Resolution** - Facilitated a supportive living environment by addressing concerns and ensuring inclusivity.`,
-        logo: "/icons/queens.svg" 
+        description: `Supported a community of **50+ residents**, coordinated **10+ events**, and managed on-call responsibilities alongside my studies. Served as a first point of contact for student concerns, de-escalating incidents and escalating cases according to university policies.`,
+        logo: "/icons/queens.svg"
       },
     ];
-  
+
     const projects = [
       {
-        name: "SlideFlow - AI Presentation Controller",
-        subtitle: "QHacks 2025 Winner",
-        description: `An AI-powered presentation controller supporting voice-driven slide navigation, live transcription, and semantic search using NLP and computer vision. Built for QHacks 2025 where it won first place.
+        name: "flagctl",
+        subtitle: "Feature Flag Service, CLI & Terraform Provider",
+        date: "Sept. 2026",
+        description: `A feature-flag service with a versioned, backward-compatible REST API and a **Cobra CLI** for creating, listing, and toggling flags across environments, with JSON and table output.
 
-- 🔹 **Voice-Driven Navigation** - Built an AI-powered presentation controller supporting voice-driven slide navigation, live transcription, and semantic search using **NLP and computer vision**.
-
-- 🔹 **AI Integration** - Integrated **Google Gemini**, **Web Speech API**, and a local **Sentence-BERT model** to process real-time voice commands and retrieve relevant slide content during live presentations.
-
-- 🔹 **Real-Time Processing** - Enabled natural language interaction with presentation content, allowing presenters to navigate and search slides using conversational commands.`,
-        technologies: ["React", "Flask", "Gemini AI", "Sentence-BERT", "Web Speech API", "Computer Vision", "NLP"],
-        link: "https://devpost.com/software/slideflow",
+Built a **Terraform provider** using the Terraform Plugin Framework so flags can be managed as infrastructure as code. Includes unit and acceptance tests, GitHub Actions CI, and binaries published with GoReleaser.`,
+        technologies: ["Go", "Cobra", "Terraform", "Docker", "GitHub Actions"],
+        link: "https://github.com/ahmedr1zwan/flagctl",
       },
       {
-        name: "OnlyKonnect - Web-Based Logic & Pattern Game",
-        description: `A web-based game inspired by the British show Only Connect, featuring custom game logic, state management, and puzzle validation for engaging gameplay.
+        name: "FashionABLE",
+        subtitle: "AI Smart Mirror & Stylist · QHacks 2026",
+        date: "Jan. 2026",
+        description: `An AI-powered smart mirror for inclusive styling, with webcam outfit overlays, generated virtual try-ons, a filterable wardrobe, and a metadata-tagged gallery.
 
-- 🔹 **Game Development** - Developed a web-based game inspired by the British show Only Connect, implementing custom game logic, state management, and puzzle validation.
+Integrated **Google Gemini** for multimodal styling advice and **Gradium** for voice interaction, with Firebase Auth, Firestore, and Storage for authentication and persistence.`,
+        technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Gemini", "Gradium", "Firebase"],
+        link: "https://github.com/ahmedr1zwan/fashion-able",
+      },
+      {
+        name: "Camera Surveillance Application",
+        subtitle: "Qt;Athon 2025 · 2nd of 138 Teams",
+        date: "Dec. 2025",
+        description: `A real-time desktop surveillance application built with **C++ and Qt**, with a responsive QML interface for camera controls and live feeds.
 
-- 🔹 **Modern Web Stack** - Built the application using **React Router** and **TypeScript**, with responsive UI components styled using **Tailwind CSS**, and deployed for live gameplay.
-
-- 🔹 **User Experience** - Created an intuitive interface that challenges players with pattern recognition and logical reasoning puzzles.`,
-        technologies: ["React", "TypeScript", "Tailwind CSS", "React Router"],
-        link: "https://github.com/ahmedr1zwan/onlykonnect_local",
+Integrated **OpenCV** for motion detection and frame processing, optimizing video handling to reduce unnecessary frame analysis and improve monitoring efficiency.`,
+        technologies: ["C++", "Qt", "QML", "OpenCV"],
+        link: "https://github.com/ahmedr1zwan/QtCameraApp",
       },
       {
         name: "Transaction Management Backend Service",
-        description: `A robust backend service for managing accounts and processing financial transactions with strong consistency guarantees and data integrity.
+        date: "May 2025",
+        description: `A **Spring Boot** backend for managing accounts and processing financial transactions with strong consistency guarantees.
 
-- 🔹 **Backend Architecture** - Designed and implemented a backend service using **Spring Boot** to manage accounts and process financial transactions with strong consistency guarantees.
-
-- 🔹 **API Development** - Built **RESTful APIs** for account creation, balance updates, and transaction history using **Spring Data JPA** and **PostgreSQL**.
-
-- 🔹 **Data Integrity** - Applied transactional boundaries and validation rules to ensure atomic updates, prevent invalid state transitions, and maintain data integrity.`,
+Built REST APIs for account creation, balance updates, and transaction history using **Spring Data JPA and PostgreSQL**, with transactional boundaries to ensure atomic updates and data integrity.`,
         technologies: ["Java", "Spring Boot", "Spring Data JPA", "PostgreSQL"],
         link: "https://github.com/ahmedr1zwan/transaction-management-service",
       },
       {
-        name: "Camera Surveillance Application",
-        description: `A real-time camera surveillance desktop application with motion detection capabilities, built using C++ and Qt for efficient video processing and monitoring.
+        name: "SlideFlow",
+        subtitle: "AI Presentation Controller · QHacks 2025 Winner",
+        date: "Jan. 2025",
+        description: `An AI-powered presentation controller for voice-driven slide navigation, live transcription, and semantic search using NLP and computer vision.
 
-- 🔹 **Desktop Application Development** - Developed a real-time camera surveillance desktop application using **C++ and Qt**, with a responsive user interface built in **QML** for camera controls and live feed visualization.
-
-- 🔹 **Computer Vision Integration** - Integrated **OpenCV** for motion detection and frame processing, optimizing video handling to reduce unnecessary frame analysis and improve monitoring efficiency.
-
-- 🔹 **Performance Optimization** - Implemented efficient video processing pipelines to ensure smooth real-time monitoring with minimal resource consumption.`,
-        technologies: ["C++", "Qt", "QML", "OpenCV"],
-        link: "https://github.com/ahmedr1zwan/QtCameraApp",
+Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT** model to process real-time voice commands and retrieve relevant slide content during live presentations.`,
+        technologies: ["React", "Flask", "Gemini AI", "Sentence-BERT", "Web Speech API"],
+        link: "https://devpost.com/software/slideflow",
       },
     ];
     return (
@@ -107,19 +97,19 @@ function ExperienceProjects() {
               Experience
             </h2>
             <p className="text-lg lg:text-xl text-apple-gray-600 font-light max-w-2xl mx-auto">
-              My professional journey and the roles I've held.
+              Building software, leading teams, and supporting communities.
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <div
-                  key={index}
+                  key={exp.company}
                   className="group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 overflow-hidden animate-slide-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex flex-col md:flex-row p-8 gap-8">
+                  <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8">
                     {/* Left: Company info */}
                     <div className="flex-1 space-y-4">
                       <div>
@@ -134,9 +124,9 @@ function ExperienceProjects() {
                         </p>
                       </div>
                       <div className="prose prose-sm max-w-none">
-                        <ReactMarkdown className="text-apple-gray-700 text-base md:text-lg leading-relaxed">
-                          {exp.description}
-                        </ReactMarkdown>
+                        <div className="text-apple-gray-700 text-base md:text-lg leading-relaxed [&>p+p]:mt-4 [&>ul]:mt-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul>li]:mt-3">
+                          <ReactMarkdown>{exp.description}</ReactMarkdown>
+                        </div>
                       </div>
                     </div>
 
@@ -164,16 +154,16 @@ function ExperienceProjects() {
               Projects
             </h2>
             <p className="text-lg lg:text-xl text-apple-gray-600 font-light max-w-2xl mx-auto">
-              A collection of projects I've built and worked on.
+              Selected work in applied AI, backend systems, and developer tools.
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
             <div className="space-y-6">
               {projects.map((proj, index) => (
                 <div
-                  key={index}
-                  className="group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 p-8 animate-slide-up"
+                  key={proj.name}
+                  className="group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 p-6 md:p-8 animate-slide-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="space-y-6">
@@ -181,15 +171,16 @@ function ExperienceProjects() {
                       <h3 className="text-2xl md:text-3xl font-semibold text-apple-gray-900 mb-2">
                         {proj.name}
                       </h3>
+                      <p className="text-sm text-apple-gray-600 mb-3">{proj.date}</p>
                       {proj.subtitle && (
                         <p className="text-sm md:text-base text-apple-blue font-medium mb-4">
                           {proj.subtitle}
                         </p>
                       )}
                       <div className="prose prose-sm max-w-none">
-                        <ReactMarkdown className="text-apple-gray-700 text-base md:text-lg leading-relaxed">
-                          {proj.description}
-                        </ReactMarkdown>
+                        <div className="text-apple-gray-700 text-base md:text-lg leading-relaxed [&>p+p]:mt-4 [&>ul]:mt-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul>li]:mt-3">
+                          <ReactMarkdown>{proj.description}</ReactMarkdown>
+                        </div>
                       </div>
                     </div>
 
@@ -216,11 +207,6 @@ function ExperienceProjects() {
                         <FiExternalLink className="w-4 h-4" />
                         View Project
                       </a>
-                    )}
-                    {!proj.link && (
-                      <p className="text-sm text-apple-gray-500 italic">
-                        Private repository
-                      </p>
                     )}
                   </div>
                 </div>
