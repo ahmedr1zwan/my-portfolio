@@ -37,7 +37,7 @@
   from { background-position: center 50%; }
   to { background-position: center calc(50% + 48px); }
 }
-.portrait-image { position: relative; display: block; width: 100%; height: auto; border: 6px solid #fdfcf9; border-radius: 3px; }
+.portrait-image { position: relative; display: block; width: 100%; height: auto; border: 6px solid #fdfcf9; border-radius: 21px; background-color: #fdfcf9; }
 #technologies, #experience, #projects { max-width: 1060px; padding: 36px 32px 28px; }
 #technologies, #projects { padding-top: 24px; }
 #experience { padding-bottom: 12px; }
@@ -87,6 +87,7 @@
 @media (max-width: 1023px) {
   #home { flex-direction: row; gap: 36px; }
   .portrait-composition { width: 190px; }
+  .portrait-image { border-radius: 18px; }
 }
 @media (max-width: 639px) {
   .nav-inner { padding: 20px 24px; }
@@ -96,6 +97,7 @@
   .hero-title { font-size: 44px; }
   .about-intro > p:last-child { font-size: 16px; }
   .portrait-composition { width: 170px; margin: 0 0 0 0; }
+  .portrait-image { border-radius: 17px; }
   #technologies, #experience, #projects { padding: 28px 24px 12px; }
   #technologies, #projects { padding-top: 20px; }
   .skill-row { grid-template-columns: 1fr; gap: 3px; }
