@@ -9,11 +9,7 @@ function ExperienceProjects() {
         role: "Software Developer Intern – Enterprise Architecture",
         years: "May 2025 – Aug. 2026",
         location: "Toronto, ON",
-        description: `Owned the design and delivery of an internal platform built with **React, TypeScript, Python, and PostgreSQL**, helping architects and engineers search and visualize metadata across **1,000+ enterprise systems**.
-
-- Built REST APIs and asynchronous pipelines with validation, caching, and error handling, cutting cross-system synchronization time by **70%**.
-- Architected and presented a **Gemini and Vertex AI** proof-of-concept for natural-language discovery of systems and dependencies.
-- Automated testing and CI/CD with Docker and added structured logging, improving reliability for features adopted by **100+ internal users**.`,
+        description: `Owned the design and delivery of an internal platform built with **React, TypeScript, Python, and PostgreSQL**, helping architects and engineers search and visualize metadata across **1,000+ enterprise systems**.`,
         logo: "/icons/intact_logo.svg"
       },
       {
@@ -21,10 +17,7 @@ function ExperienceProjects() {
         role: "Full-Stack Developer, Team Lead",
         years: "Oct. 2024 – Apr. 2025",
         location: "Kingston, ON",
-        description: `Led developers and designers through a multi-month client engagement, owning technical direction and coordinating delivery of a full-stack web application.
-
-- Built the frontend in **Next.js** and **Go REST APIs** backed by **MongoDB**, with validation, indexing, and error handling.
-- Improved API response times by approximately **20%** through query optimization and backend refactoring, and established Git workflows and code reviews.`,
+        description: `Led developers and designers through a multi-month client engagement, owning technical direction and coordinating delivery of a full-stack web application.`,
         logo: "/icons/qweb.svg"
       },
       {
@@ -32,7 +25,7 @@ function ExperienceProjects() {
         role: "Residence Don (Residence Advisor)",
         years: "Sept. 2023 – Apr. 2025",
         location: "Kingston, ON",
-        description: `Supported a community of **50+ residents**, coordinated **10+ events**, and managed on-call responsibilities alongside my studies. Served as a first point of contact for student concerns, de-escalating incidents and escalating cases according to university policies.`,
+        description: `Supported **50+ residents** through community events, student guidance, and conflict resolution.`,
         logo: "/icons/queens.svg"
       },
     ];
