@@ -31,7 +31,7 @@
 .education p:first-of-type { color: #252b2d; font-weight: 500; }
 .education h2 { font-size: 15px; font-weight: 600; color: #252b2d; margin-bottom: 8px; }
 .portrait-composition { width: 236px; flex-shrink: 0; margin: 9px 16px 0 0; align-self: stretch; display: flex; }
-.portrait-frame { position: relative; width: 100%; padding: 0 0 18px 0; }
+.portrait-frame { position: relative; width: 100%; display: flex; align-items: center; padding: 0 0 18px 0; }
 .portrait-frame::before { content: ''; position: absolute; width: 52px; top: -16px; bottom: 2px; right: -22px; background: #963e3c url('/art/woven-border.svg') repeat-y center; background-size: 48px 48px; animation: woven-flow 4s linear infinite; }
 /* Move exactly one tile per cycle so the pattern loops without a jump. */
 @keyframes woven-flow {
