@@ -2,66 +2,78 @@
 @config "../tailwind.config.js";
 
 @layer base {
-  * {
-    @apply antialiased;
-  }
-  
-  body {
-    @apply bg-white text-apple-gray-900;
-    font-feature-settings: "kern" 1, "liga" 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Add scroll margin to sections to account for fixed navbar */
-  #home, #technologies, #experience, #projects {
-    scroll-margin-top: 80px;
-  }
+  * { @apply antialiased; }
+  body { margin: 0; background: #faf6ed; color: #35251f; font-feature-settings: "kern" 1, "liga" 1; }
+  html { scroll-behavior: smooth; }
+  #home, #technologies, #experience, #projects { scroll-margin-top: 100px; }
+  ::selection { background: #eac275; color: #35251f; }
+  a:focus-visible { outline: 3px solid #17665f; outline-offset: 5px; }
 }
 
 @layer utilities {
-  .glass {
-    @apply bg-white/80 backdrop-blur-apple;
-  }
-  
-  .glass-dark {
-    @apply bg-apple-gray-900/80 backdrop-blur-apple;
-  }
+  .glass { background: rgb(250 246 237 / 94%); backdrop-filter: blur(20px); }
+  .glass-dark { background: rgb(53 37 31 / 90%); backdrop-filter: blur(20px); }
 }
 
-
-@layer components {
-  .about-intro {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    border-radius: 24px;
-    padding: 28px 24px;
-    background: linear-gradient(115deg, #fafcfe 15%, #f0f6ff 100%);
-    box-shadow: inset 0 0 0 1px rgb(0 122 255 / 5%);
-  }
-
-  .about-intro > h1,
-  .about-intro > p {
-    text-shadow: 0 1px 8px rgb(255 255 255 / 95%);
-  }
-
-  .pixel-mesh {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    mask-image: radial-gradient(ellipse at 65% 45%, #000 25%, transparent 85%);
-  }
-
-  @media (min-width: 640px) {
-    .about-intro {
-      padding: 32px;
-    }
-  }
+.site-nav { border-top: 3px solid #702f3b; }
+.site-nav > div { max-width: 1184px; }
+.site-nav > div > div > div:first-child { display: flex; align-items: center; gap: 24px; }
+.nav-monogram { font: italic 32px Georgia, serif; color: #702f3b; }
+.nav-monogram span { margin-left: 8px; color: #17665f; font: 22px Georgia, serif; }
+.nav-clock { font-variant-numeric: tabular-nums; color: #6f5d52; }
+.skip-link { position: fixed; top: -80px; left: 16px; z-index: 100; background: #faf6ed; padding: 12px 20px; }
+.skip-link:focus { top: 12px; }
+#home { padding-top: 136px; padding-bottom: 64px; align-items: center; }
+.about-intro { padding: 0; }
+.eyebrow { color: #702f3b; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.hero-title { font: 400 clamp(3.5rem, 6.2vw, 5.7rem)/1.03 Georgia, 'Times New Roman', serif; letter-spacing: -.055em; max-width: 600px; }
+.about-intro > p:last-child { max-width: 570px; margin-top: 26px; }
+.work-link { display: inline-flex; align-items: center; gap: 36px; padding: 13px 22px; border: 1px solid #702f3b; background: #702f3b; color: #fffaf0; border-radius: 4px; font-size: 14px; }
+.work-link:hover { background: #562330; }
+.work-link span { font-size: 20px; }
+.portrait-composition { width: 350px; max-width: 100%; flex-shrink: 0; }
+.portrait-arch { position: relative; isolation: isolate; height: 410px; overflow: hidden; border-radius: 180px 180px 8px 8px; background: #702f3b; border: 8px solid #eadfcf; outline: 1px solid #c9b694; }
+.portrait-arch::after { content: ''; position: absolute; inset: 8px; border: 1px solid #dca94f; border-radius: 170px 170px 0 0; pointer-events: none; z-index: 3; }
+.portrait-image { position: absolute; width: 252px; height: auto; max-height: 355px; object-fit: contain; border-radius: 140px 140px 4px 4px; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 2; }
+.portrait-flower { position: absolute; width: 265px; top: -30px; left: -72px; transform: rotate(15deg); }
+.portrait-paisley { position: absolute; width: 145px; right: -20px; bottom: 4px; transform: rotate(12deg); }
+.portrait-caption { font: italic 14px Georgia, serif; text-align: center; margin-top: 20px; color: #6f5d52; }
+.woven-border { height: 40px; max-width: 1184px; margin: 0 auto; background: url('/art/woven-border.svg') repeat-x center; opacity: .85; }
+#technologies, #experience, #projects { padding-top: 64px; padding-bottom: 32px; }
+.section-heading { text-align: left; max-width: 1024px; margin-left: auto; margin-right: auto; }
+.section-heading .eyebrow { margin-bottom: 12px; }
+.section-heading h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(2.5rem, 5vw, 3.5rem); }
+.section-heading > p:last-child { margin-left: 0; font-size: 17px; font-weight: 400; }
+.skill-card { background: #f6efe3; border-radius: 6px; border-top: 3px solid #17665f; }
+.skill-card:nth-child(2), .skill-card:nth-child(3) { border-top-color: #702f3b; }
+.portfolio-card { background: #fffcf6; border-radius: 6px; box-shadow: 0 3px 0 #eee4d5; }
+.portfolio-card h3 { letter-spacing: -.025em; }
+#projects .portfolio-card { border-left: 4px solid #17665f; }
+#projects .portfolio-card:nth-child(even) { border-left-color: #702f3b; }
+#projects .portfolio-card a { border-radius: 4px; box-shadow: none; }
+.site-footer { margin-top: 64px; }
+.site-footer > div:last-child { max-width: 1184px; margin: auto; padding: 32px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-footer span { font: 24px Georgia, serif; }
+.site-footer a { color: #17665f; font-size: 14px; }
+@media (max-width: 1023px) {
+  #home { align-items: flex-start; }
+  .portrait-composition { align-self: center; }
+}
+@media (max-width: 639px) {
+  #home { padding-top: 108px; padding-bottom: 40px; gap: 40px; }
+  .nav-clock { display: none; }
+  .site-nav > div > div > div:last-child { gap: 16px; }
+  .site-nav a { font-size: 13px; }
+  .site-nav .nav-monogram { font-size: 28px; }
+  .hero-title { font-size: 3.5rem; }
+  .eyebrow { font-size: 10px; letter-spacing: .1em; }
+  .portrait-composition { width: 310px; }
+  .portrait-arch { height: 365px; }
+  .portrait-image { width: 222px; }
+  #technologies, #experience, #projects { padding-top: 44px; }
+  .site-footer > div:last-child { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

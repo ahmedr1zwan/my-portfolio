@@ -20,7 +20,8 @@ const skillGroups = [
 const Techno = () => {
   return (
     <section id="technologies" className="pt-8 pb-12 px-6 lg:px-12 max-w-7xl mx-auto">
-      <div className="text-center mb-10">
+      <div className="section-heading mb-10">
+        <p className="eyebrow">01 / The toolkit</p>
         <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight text-apple-gray-900 mb-3">
           Skills
         </h2>
@@ -31,7 +32,7 @@ const Techno = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
         {skillGroups.map((group) => (
-          <div key={group.title} className="rounded-2xl border border-apple-gray-200 p-6">
+          <div key={group.title} className="skill-card rounded-2xl border border-apple-gray-200 p-6">
             <h3 className="text-base font-semibold text-apple-gray-900 mb-4">{group.title}</h3>
             <ul className="flex flex-wrap gap-2">
               {group.skills.map((skill) => (

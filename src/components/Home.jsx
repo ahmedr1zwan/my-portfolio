@@ -1,4 +1,4 @@
-import PixelMesh from "./PixelMesh";
+import { FloralMedallion, Paisley } from "./HeritageArt";
 
 const Home = () => {
   return (
@@ -9,8 +9,8 @@ const Home = () => {
       {/* Left section: Content */}
       <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
         <div className="about-intro space-y-4">
-          <PixelMesh />
-          <h1 className="relative text-5xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 leading-tight">
+          <p className="eyebrow">Software developer · Creative problem solver</p>
+          <h1 className="hero-title">
             Ahmed Rizwan
           </h1>
           
@@ -18,6 +18,8 @@ const Home = () => {
             I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at Intact.
           </p>
         </div>
+
+        <a className="work-link" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
 
         {/* Social Links */}
         <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -60,12 +62,17 @@ const Home = () => {
       </div>
 
       {/* Right section: Profile Picture */}
-      <div className="w-full lg:w-auto flex justify-center lg:justify-start mt-4 lg:mt-8">
+      <div className="portrait-composition">
+        <div className="portrait-arch">
+          <FloralMedallion className="portrait-flower" />
+          <Paisley className="portrait-paisley" />
         <img
           src="/assets/ahmed_2.svg"
           alt="Ahmed Rizwan"
-          className="w-56 h-auto md:w-72 lg:w-80"
+          className="portrait-image"
         />
+        </div>
+        <p className="portrait-caption">A little craft. A lot of curiosity.</p>
       </div>
     </div>
   );

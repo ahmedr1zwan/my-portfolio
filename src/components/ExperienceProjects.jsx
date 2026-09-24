@@ -92,7 +92,8 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
       <>
         {/* Experience Section */}
         <section id="experience" className="pt-8 pb-12 px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="section-heading mb-12 animate-fade-in">
+            <p className="eyebrow">02 / Along the way</p>
             <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
               Experience
             </h2>
@@ -106,7 +107,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
               {experiences.map((exp, index) => (
                 <div
                   key={exp.company}
-                  className="group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 overflow-hidden animate-slide-up"
+                  className="portfolio-card group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 overflow-hidden animate-slide-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8">
@@ -149,7 +150,8 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
 
         {/* Projects Section */}
         <section id="projects" className="pt-8 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
+          <div className="section-heading mb-12 animate-fade-in">
+            <p className="eyebrow">03 / Selected work</p>
             <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
               Projects
             </h2>
@@ -163,7 +165,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
               {projects.map((proj, index) => (
                 <div
                   key={proj.name}
-                  className="group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 p-6 md:p-8 animate-slide-up"
+                  className="portfolio-card group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 p-6 md:p-8 animate-slide-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="space-y-6">
