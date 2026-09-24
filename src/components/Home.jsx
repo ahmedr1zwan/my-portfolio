@@ -66,7 +66,14 @@ const Home = () => {
       <div className="portrait-composition">
         <div className="portrait-frame">
         <img
-          src="/assets/ahmed_2.svg"
+          src="/assets/ahmed-720.webp"
+          srcSet="/assets/ahmed-360.webp 360w, /assets/ahmed-720.webp 720w"
+          sizes="(max-width: 639px) 158px, (max-width: 1023px) 178px, 224px"
+          width="720"
+          height="960"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           alt="Ahmed Rizwan"
           className="portrait-image"
         />
