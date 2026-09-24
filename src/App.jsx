@@ -13,13 +13,12 @@ function App() {
         <Navbar />
         <main id="main-content">
         <Home />
-        <WovenBorder />
         <Techno />
         <ExperienceProjects />
         </main>
         <footer className="site-footer">
           <WovenBorder />
-          <div><span>Ahmed Rizwan</span><a href="mailto:ahmed.rizwan@queensu.ca">Let’s build something thoughtful ↗</a></div>
+          <div><span>Ahmed Rizwan</span><a href="mailto:ahmed.rizwan@queensu.ca">ahmed.rizwan@queensu.ca</a></div>
         </footer>
     </>
   )

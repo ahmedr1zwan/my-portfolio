@@ -1,4 +1,3 @@
-import { FloralMedallion, Paisley } from "./HeritageArt";
 
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
       {/* Left section: Content */}
       <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
         <div className="about-intro space-y-4">
-          <p className="eyebrow">Software developer · Creative problem solver</p>
+          <p className="intro-role">Software developer</p>
           <h1 className="hero-title">
             Ahmed Rizwan
           </h1>
@@ -19,10 +18,9 @@ const Home = () => {
           </p>
         </div>
 
-        <a className="work-link" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
 
         {/* Social Links */}
-        <div className="flex flex-wrap items-center gap-4 pt-2">
+        <div className="social-links flex flex-wrap items-center gap-4 pt-2">
           <a
             href="https://github.com/ahmedr1zwan"
             target="_blank"
@@ -48,7 +46,7 @@ const Home = () => {
             <span className="text-sm">ahmed.rizwan@queensu.ca</span>
           </a>
         </div>
-        <div className="border-t border-apple-gray-200 pt-5 flex items-start sm:items-center gap-4">
+        <div className="education border-t border-apple-gray-200 pt-5 flex items-start sm:items-center gap-4">
           <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl bg-apple-gray-50 p-3 flex items-center justify-center">
             <img src="/icons/queens.svg" alt="Queen’s University logo" className="w-full h-full object-contain" />
           </div>
@@ -63,16 +61,13 @@ const Home = () => {
 
       {/* Right section: Profile Picture */}
       <div className="portrait-composition">
-        <div className="portrait-arch">
-          <FloralMedallion className="portrait-flower" />
-          <Paisley className="portrait-paisley" />
+        <div className="portrait-frame">
         <img
           src="/assets/ahmed_2.svg"
           alt="Ahmed Rizwan"
           className="portrait-image"
         />
         </div>
-        <p className="portrait-caption">A little craft. A lot of curiosity.</p>
       </div>
     </div>
   );

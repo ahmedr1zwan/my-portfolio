@@ -93,24 +93,20 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
         {/* Experience Section */}
         <section id="experience" className="pt-8 pb-12 px-6 lg:px-12 max-w-7xl mx-auto">
           <div className="section-heading mb-12 animate-fade-in">
-            <p className="eyebrow">02 / Along the way</p>
             <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
               Experience
             </h2>
-            <p className="text-lg lg:text-xl text-apple-gray-600 font-light max-w-2xl mx-auto">
-              Building software, leading teams, and supporting communities.
-            </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="space-y-6">
-              {experiences.map((exp, index) => (
+            <div className="entry-list">
+              {experiences.map((exp) => (
                 <div
                   key={exp.company}
-                  className="portfolio-card group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 overflow-hidden animate-slide-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="experience-entry"
+
                 >
-                  <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8">
+                  <div className="experience-content">
                     {/* Left: Company info */}
                     <div className="flex-1 space-y-4">
                       <div>
@@ -132,7 +128,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
                     </div>
 
                     {/* Right: Logo */}
-                    <div className="flex-shrink-0 flex justify-center md:justify-end items-start">
+                    <div className="company-logo">
                       <div className="w-24 h-24 md:w-32 md:h-32 p-4 bg-apple-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-apple-blue/5 transition-colors">
                         <img
                           src={exp.logo}
@@ -151,22 +147,18 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
         {/* Projects Section */}
         <section id="projects" className="pt-8 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
           <div className="section-heading mb-12 animate-fade-in">
-            <p className="eyebrow">03 / Selected work</p>
             <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
               Projects
             </h2>
-            <p className="text-lg lg:text-xl text-apple-gray-600 font-light max-w-2xl mx-auto">
-              Selected work in applied AI, backend systems, and developer tools.
-            </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="space-y-6">
-              {projects.map((proj, index) => (
+            <div className="entry-list">
+              {projects.map((proj) => (
                 <div
                   key={proj.name}
-                  className="portfolio-card group bg-white rounded-2xl border border-apple-gray-200 hover:border-apple-blue hover:shadow-apple-lg transition-all duration-300 p-6 md:p-8 animate-slide-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="project-entry"
+
                 >
                   <div className="space-y-6">
                     <div>
@@ -187,11 +179,11 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
                     </div>
 
                     {/* Technologies used */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="project-tags">
                       {proj.technologies.filter(Boolean).map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1.5 bg-apple-gray-50 text-apple-gray-700 rounded-full text-xs font-medium border border-apple-gray-200 hover:border-apple-blue hover:bg-apple-blue/5 transition-colors"
+
                         >
                           {tech}
                         </span>
@@ -204,10 +196,10 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
                         href={proj.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-apple-blue text-white rounded-full text-sm font-medium hover:bg-apple-blue/90 transition-all duration-200 shadow-apple hover:shadow-apple-lg"
+                        className="project-link"
                       >
                         <FiExternalLink className="w-4 h-4" />
-                        View Project
+                        {proj.link.includes('github.com') ? 'Source code' : 'Project details'}
                       </a>
                     )}
                   </div>
