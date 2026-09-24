@@ -8,7 +8,7 @@ const Home = () => {
       {/* Left section: Content */}
       <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
         <div className="about-intro space-y-4">
-          <p className="intro-role">Software developer</p>
+          <p className="intro-role">software developer</p>
           <h1 className="hero-title">
             Ahmed Rizwan
           </h1>
