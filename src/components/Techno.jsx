@@ -1,3 +1,5 @@
+import CollapsibleSection from './CollapsibleSection';
+
 const skillGroups = [
   {
     title: 'Languages',
@@ -19,13 +21,7 @@ const skillGroups = [
 
 const Techno = () => {
   return (
-    <section id="technologies" className="pt-8 pb-12 px-6 lg:px-12 max-w-7xl mx-auto">
-      <div className="section-heading mb-10">
-        <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight text-apple-gray-900 mb-3">
-          Skills
-        </h2>
-      </div>
-
+    <CollapsibleSection id="technologies" title="Skills">
       <div className="skill-list">
         {skillGroups.map((group) => (
           <div key={group.title} className="skill-row">
@@ -40,7 +36,7 @@ const Techno = () => {
           </div>
         ))}
       </div>
-    </section>
+    </CollapsibleSection>
   );
 };
 

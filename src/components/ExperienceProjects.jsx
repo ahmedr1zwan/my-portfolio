@@ -1,3 +1,4 @@
+import CollapsibleSection from './CollapsibleSection';
 import ReactMarkdown from 'react-markdown';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -84,13 +85,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
     return (
       <>
         {/* Experience Section */}
-        <section id="experience" className="pt-8 pb-12 px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="section-heading mb-12 animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
-              Experience
-            </h2>
-          </div>
-
+        <CollapsibleSection id="experience" title="Experience">
           <div className="max-w-5xl mx-auto">
             <div className="entry-list">
               {experiences.map((exp) => (
@@ -135,18 +130,12 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
               ))}
             </div>
           </div>
-        </section>
+        </CollapsibleSection>
 
         {/* Projects Section */}
-        <section id="projects" className="pt-8 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
-          <div className="section-heading mb-12 animate-fade-in">
-            <h2 className="text-4xl lg:text-6xl font-semibold tracking-tight text-apple-gray-900 mb-4">
-              Projects
-            </h2>
-          </div>
-
+        <CollapsibleSection id="projects" title="Projects">
           <div className="max-w-5xl mx-auto">
-            <div className="entry-list">
+            <div className="project-list">
               {projects.map((proj) => (
                 <div
                   key={proj.name}
@@ -200,7 +189,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
               ))}
             </div>
           </div>
-        </section>
+        </CollapsibleSection>
       </>
 
     );

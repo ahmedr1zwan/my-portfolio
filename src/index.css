@@ -25,10 +25,11 @@
 .social-links a { text-decoration: underline; text-decoration-color: #b7bbb6; text-underline-offset: 5px; }
 .social-links a:hover { color: #963e3c; }
 .social-links img { width: 16px; height: 16px; }
-.education { margin-top: 32px; border-color: #deded6; }
+.education { margin-top: 28px; padding-top: 22px; align-items: flex-start; gap: 18px; border-color: #deded6; }
 .education > div:first-child { background: none; width: 40px; height: 48px; padding: 0; border-radius: 0; }
-.education p { color: #626969; font-size: 13px; }
-.education h2 { font-weight: 500; color: #252b2d; }
+.education p { color: #41494b; font-size: 14px; line-height: 1.65; margin-top: 5px; }
+.education p:first-of-type { color: #252b2d; font-weight: 500; }
+.education h2 { font-size: 15px; font-weight: 600; color: #252b2d; margin-bottom: 8px; }
 .portrait-composition { width: 236px; flex-shrink: 0; margin: 9px 16px 0 0; }
 .portrait-frame { position: relative; padding: 0 0 18px 0; }
 .portrait-frame::before { content: ''; position: absolute; width: 52px; top: -16px; bottom: 2px; right: -22px; background: #963e3c url('/art/woven-border.svg') repeat-y center; background-size: 48px 48px; animation: woven-flow 4s linear infinite; }
@@ -38,11 +39,16 @@
   to { background-position: center calc(50% + 48px); }
 }
 .portrait-image { position: relative; display: block; width: 100%; height: auto; border: 6px solid #fdfcf9; border-radius: 21px; background-color: #fdfcf9; }
-#technologies, #experience, #projects { max-width: 1060px; padding: 36px 32px 28px; }
-#technologies, #projects { padding-top: 24px; }
-#experience { padding-bottom: 12px; }
-.section-heading { margin: 0 0 28px; border-top: 1px solid #deded6; padding-top: 25px; }
-.section-heading h2 { font-size: 24px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; color: #252b2d; margin: 0; }
+#technologies, #experience, #projects { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
+.section-disclosure { border-top: 1px solid #deded6; }
+.section-toggle { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; cursor: pointer; list-style: none; }
+.section-toggle::-webkit-details-marker { display: none; }
+.section-toggle h2 { font-size: 24px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; color: #252b2d; margin: 0; }
+.section-chevron { flex-shrink: 0; width: 24px; height: 24px; color: #963e3c; transition: transform 180ms ease; }
+.section-disclosure[open] > .section-toggle .section-chevron { transform: rotate(180deg); }
+.section-toggle:hover h2 { color: #963e3c; }
+.section-toggle:focus-visible { outline: 2px solid #963e3c; outline-offset: 4px; border-radius: 2px; }
+.section-content { padding: 4px 0 32px; }
 .skill-list { display: grid; gap: 16px; }
 .skill-row { display: grid; grid-template-columns: 175px 1fr; gap: 24px; font-size: 14px; line-height: 1.75; }
 .skill-label { color: #626969; font-weight: 400; }
@@ -59,7 +65,7 @@
 .company-logo > div { width: 48px; height: 48px; padding: 5px; background: #f1f1ec; border-radius: 4px; }
 .prose > div { font-size: 15px; line-height: 1.75; color: #454e50; }
 .prose strong { font-weight: 500; color: #252b2d; }
-#projects > div:last-child > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
+.project-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
 .project-entry { margin: 0; padding: 26px 0 32px; border-bottom: 1px solid #deded6; }
 .project-entry:nth-child(-n+2) { padding-top: 0; }
 .project-entry h3 + p { color: #626969; font-size: 12px; }
@@ -98,11 +104,13 @@
   .about-intro > p:last-child { font-size: 16px; }
   .portrait-composition { width: 170px; margin: 0 0 0 0; }
   .portrait-image { border-radius: 17px; }
-  #technologies, #experience, #projects { padding: 28px 24px 12px; }
-  #technologies, #projects { padding-top: 20px; }
+  #technologies, #experience, #projects { padding: 0 24px; }
+  .section-toggle { padding: 22px 0; }
+  .section-toggle h2 { font-size: 22px; }
+  .section-content { padding-bottom: 24px; }
   .skill-row { grid-template-columns: 1fr; gap: 3px; }
   .skill-label { font-size: 13px; }
-  #projects > div:last-child > div { grid-template-columns: 1fr; }
+  .project-list { grid-template-columns: 1fr; }
   .project-entry:nth-child(2) { padding-top: 26px; }
   .experience-content { gap: 16px; }
   .company-logo > div { width: 32px; height: 36px; padding: 2px; }
