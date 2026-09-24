@@ -20,6 +20,24 @@
 #home > div:first-child { padding-top: 0; }
 .intro-role { font-size: 15px; color: #963e3c; font-weight: 500; }
 .hero-title { font-size: clamp(2.8rem, 5.5vw, 4.25rem); font-weight: 500; line-height: 1.08; letter-spacing: -.055em; color: #252b2d; }
+/* Darker gold echoes the weave's cream while staying readable on ivory. */
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .hero-title {
+    background-image: linear-gradient(90deg, #963e3c 0%, #89613b 25%, #292f33 50%, #89613b 75%, #963e3c 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: name-gradient-flow 10s linear infinite;
+  }
+}
+@keyframes name-gradient-flow {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+@media (forced-colors: active) {
+  .hero-title { background: none; color: CanvasText; animation: none; }
+}
 .about-intro > p:last-child { max-width: 580px; margin-top: 25px; font-size: 18px; line-height: 1.65; color: #454e50; }
 .social-links { gap: 14px 24px; }
 .social-links a { text-decoration: underline; text-decoration-color: #b7bbb6; text-underline-offset: 5px; }
