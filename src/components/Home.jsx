@@ -51,7 +51,10 @@ const Home = () => {
             <img src="/icons/queens.svg" alt="Queen’s University logo" className="w-full h-full object-contain" />
           </div>
           <div className="min-w-0 space-y-1">
-            <h2 className="text-sm font-semibold text-apple-gray-900">Education</h2>
+            <h2 className="flex items-center gap-1 text-sm font-semibold text-apple-gray-900">
+              <img src="/icons/graduation_cap.svg" alt="" aria-hidden="true" className="w-6 h-6 shrink-0" />
+              Education
+            </h2>
             <p className="text-sm text-apple-gray-700">Queen’s University · Bachelor of Computing (Hons.)</p>
             <p className="text-sm text-apple-gray-600">Computer Science, AI Specialization · Kingston, ON</p>
             <p className="text-sm text-apple-gray-600">Sept. 2022 – Apr. 2027 (expected)</p>
