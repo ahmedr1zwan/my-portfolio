@@ -1,4 +1,3 @@
-import MarkerLink from './MarkerLink';
 import CollapsibleSection from './CollapsibleSection';
 import ReactMarkdown from 'react-markdown';
 import { FiExternalLink } from 'react-icons/fi';
@@ -8,7 +7,6 @@ function ExperienceProjects() {
     const experiences = [
       {
         company: "Intact",
-        website: "https://www.intactfc.com/",
         role: "Software Developer Intern – Enterprise Architecture",
         years: "May 2025 – Aug. 2026",
         location: "Toronto, ON",
@@ -102,7 +100,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
                     <div className="flex-1 space-y-4">
                       <div>
                         <h3 className="text-2xl md:text-3xl font-semibold text-apple-gray-900 mb-2">
-                          {exp.website ? <MarkerLink href={exp.website}><strong>{exp.company}</strong></MarkerLink> : exp.company}
+                          <strong>{exp.company}</strong>
                         </h3>
                         <p className="text-lg md:text-xl font-medium text-apple-gray-700 mb-2">
                           {exp.role}

@@ -1,3 +1,4 @@
+import { FiMail } from 'react-icons/fi';
 import MarkerLink from './MarkerLink';
 const Home = () => {
   return (
@@ -42,8 +43,8 @@ const Home = () => {
           </a>
           
           <a href="mailto:ahmed.rizwan@queensu.ca" className="flex items-center gap-2 text-apple-gray-600 hover:text-apple-gray-900 transition-colors">
-            <img src="/assets/mail.svg" alt="Email" className="w-5 h-5" />
-            <span className="text-sm">ahmed.rizwan@queensu.ca</span>
+            <FiMail className="w-4 h-4" aria-hidden="true" />
+            <span className="text-sm font-medium">Email</span>
           </a>
         </div>
         <div className="education">
