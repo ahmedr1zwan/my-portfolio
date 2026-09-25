@@ -13,14 +13,15 @@ function ExperienceProjects() {
         years: "May 2025 – Aug. 2026",
         location: "Toronto, ON",
         description: `Owned the design and delivery of an internal platform built with **React, TypeScript, Python, and PostgreSQL**, helping architects and engineers search and visualize metadata across **1,000+ enterprise systems**.`,
-        logo: "/icons/intact_logo.svg"
+        logo: "/icons/intact-logo-basic.png",
+        logoClass: "intact-logo"
       },
       {
         company: "QWeb (Queen’s Web Development Club)",
         role: "Full-Stack Developer, Team Lead",
         years: "Oct. 2024 – Apr. 2025",
         location: "Kingston, ON",
-        description: `Led developers and designers through a multi-month client engagement, owning technical direction and coordinating delivery of a full-stack web application.`,
+        description: `**Led developers and designers** through a multi-month client engagement, owning **technical direction** and coordinating delivery of a full-stack web application.`,
         logo: "/icons/qweb.svg"
       },
       {
@@ -101,7 +102,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
                     <div className="flex-1 space-y-4">
                       <div>
                         <h3 className="text-2xl md:text-3xl font-semibold text-apple-gray-900 mb-2">
-                          {exp.website ? <MarkerLink href={exp.website}>{exp.company}</MarkerLink> : exp.company}
+                          {exp.website ? <MarkerLink href={exp.website}><strong>{exp.company}</strong></MarkerLink> : exp.company}
                         </h3>
                         <p className="text-lg md:text-xl font-medium text-apple-gray-700 mb-2">
                           {exp.role}
@@ -119,7 +120,7 @@ Combined **Google Gemini**, the **Web Speech API**, and a local **Sentence-BERT*
 
                     {/* Right: Logo */}
                     <div className="company-logo">
-                      <div className="w-24 h-24 md:w-32 md:h-32 p-4 bg-apple-gray-50 rounded-2xl flex items-center justify-center group-hover:bg-apple-blue/5 transition-colors">
+                      <div className={exp.logoClass || "standard-company-logo"}>
                         <img
                           src={exp.logo}
                           alt={`${exp.company} logo`}

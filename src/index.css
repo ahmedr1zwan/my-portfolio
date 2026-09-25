@@ -138,6 +138,10 @@
 .experience-content h3 + p + p { font-size: 13px; font-weight: 400; color: var(--text-muted); }
 .company-logo { flex-shrink: 0; }
 .company-logo > div { width: 48px; height: 48px; padding: 5px; background: #f1f1ec; border-radius: 4px; }
+/* Crop the supplied 800px square logo to its central wordmark without altering it. */
+.company-logo > .intact-logo { position: relative; width: 88px; height: auto; aspect-ratio: 648 / 300; padding: 0; overflow: hidden; background: #fff; }
+.intact-logo img { position: absolute; width: 123.4568%; max-width: none; height: auto; left: -11.7284%; top: -83.3333%; }
+.marker-link strong, .experience-entry .prose strong { font-weight: 600; }
 .prose > div { font-size: 15px; line-height: 1.75; color: var(--text-body); }
 .prose strong { font-weight: 500; color: var(--text-primary); }
 .project-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; }
@@ -164,7 +168,7 @@
   to { transform: translateX(0); }
 }
 .footer-content { max-width: 1060px; margin: 0 auto; padding: 24px 32px 40px; color: var(--text-muted); font-size: 13px; }
-.footer-note { max-width: 580px; line-height: 1.7; margin-bottom: 22px; }
+.footer-note { font-style: italic; max-width: 580px; line-height: 1.7; margin-bottom: 22px; }
 .footer-meta { display: flex; justify-content: space-between; gap: 20px; }
 .site-footer a { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 1023px) {
@@ -195,6 +199,7 @@
   .project-entry:nth-child(2) { padding-top: 26px; }
   .experience-content { gap: 16px; }
   .company-logo > div { width: 32px; height: 36px; padding: 2px; }
+  .company-logo > .intact-logo { width: 64px; height: auto; padding: 0; }
   .experience-content h3 { font-size: 20px; }
   .site-footer { margin-top: 40px; }
   .footer-content { padding-inline: 24px; }

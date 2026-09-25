@@ -19,7 +19,7 @@ function App() {
         <footer className="site-footer">
           <WovenBorder />
           <div className="footer-content">
-            <p className="footer-note">A small nod to Pakistan’s textile traditions, with repeating geometric motifs in burgundy, cream, and charcoal.</p>
+            <p className="footer-note">Pattern inspired by Pakistan's textile traditions with repeating geometric motifs in burgundy, cream, and charcoal.</p>
             <div className="footer-meta">
               <span>Ahmed Rizwan</span>
               <a href="mailto:ahmed.rizwan@queensu.ca">ahmed.rizwan@queensu.ca</a>

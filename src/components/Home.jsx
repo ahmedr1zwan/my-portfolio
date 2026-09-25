@@ -14,7 +14,7 @@ const Home = () => {
           <p className="intro-role">software developer</p>
           
           <p className="relative text-lg lg:text-xl text-apple-gray-700 leading-relaxed max-w-2xl">
-            I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at <MarkerLink href="https://www.intactfc.com/">Intact</MarkerLink>.
+            I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at <MarkerLink href="https://www.intactfc.com/"><strong>Intact</strong></MarkerLink>.
           </p>
         </div>
 
