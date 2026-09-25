@@ -1,4 +1,4 @@
-
+import MarkerLink from './MarkerLink';
 const Home = () => {
   return (
     <div
@@ -7,14 +7,14 @@ const Home = () => {
     >
       {/* Left section: Content */}
       <div className="w-full lg:w-auto lg:flex-1 space-y-6 lg:pt-8">
-        <div className="about-intro space-y-4">
-          <p className="intro-role">software developer</p>
+        <div className="about-intro">
           <h1 className="hero-title">
             Ahmed Rizwan
           </h1>
+          <p className="intro-role">software developer</p>
           
           <p className="relative text-lg lg:text-xl text-apple-gray-700 leading-relaxed max-w-2xl">
-            I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at Intact.
+            I build full-stack applications, applied AI tools, and backend services. Most recently, I helped architects and engineers explore 1,000+ enterprise systems at <MarkerLink href="https://www.intactfc.com/">Intact</MarkerLink>.
           </p>
         </div>
 
