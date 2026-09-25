@@ -58,7 +58,7 @@ const Home = () => {
           <div className="education-description">
             <p>Queen’s University · Bachelor of Computing (Hons.)</p>
             <p>Computer Science, AI Specialization · Kingston, ON</p>
-            <p>Sept. 2022 – Apr. 2027 (expected)</p>
+            <p>Sept. 2022 – Apr. 2027</p>
           </div>
         </div>
       </div>
