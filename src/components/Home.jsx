@@ -46,18 +46,18 @@ const Home = () => {
             <span className="text-sm">ahmed.rizwan@queensu.ca</span>
           </a>
         </div>
-        <div className="education border-t border-apple-gray-200 pt-5 flex items-start sm:items-center gap-4">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 shrink-0 rounded-2xl bg-apple-gray-50 p-3 flex items-center justify-center">
-            <img src="/icons/queens.svg" alt="Queen’s University logo" className="w-full h-full object-contain" />
+        <div className="education">
+          <h2 className="flex items-center gap-1">
+            <img src="/icons/graduation_cap.svg" alt="" aria-hidden="true" className="w-6 h-6 shrink-0" />
+            Education
+          </h2>
+          <div className="education-logo">
+            <img src="/icons/queens.svg" alt="Queen’s University logo" />
           </div>
-          <div className="min-w-0 space-y-1">
-            <h2 className="flex items-center gap-1 text-sm font-semibold text-apple-gray-900">
-              <img src="/icons/graduation_cap.svg" alt="" aria-hidden="true" className="w-6 h-6 shrink-0" />
-              Education
-            </h2>
-            <p className="text-sm text-apple-gray-700">Queen’s University · Bachelor of Computing (Hons.)</p>
-            <p className="text-sm text-apple-gray-600">Computer Science, AI Specialization · Kingston, ON</p>
-            <p className="text-sm text-apple-gray-600">Sept. 2022 – Apr. 2027 (expected)</p>
+          <div className="education-description">
+            <p>Queen’s University · Bachelor of Computing (Hons.)</p>
+            <p>Computer Science, AI Specialization · Kingston, ON</p>
+            <p>Sept. 2022 – Apr. 2027 (expected)</p>
           </div>
         </div>
       </div>
