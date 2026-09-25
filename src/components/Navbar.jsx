@@ -35,7 +35,9 @@ export default function Navbar() {
   return (
     <nav aria-label="Main navigation" className="site-nav">
       <div className="nav-inner">
-        <a href="#home" className="nav-name" aria-label="Ahmed Rizwan home">Ahmed R.</a>
+        <a href="#home" className="nav-name" aria-label="Ahmed Rizwan home">
+          <img src="/assets/ar-monogram.png" alt="" className="nav-logo" width="56" height="56" />
+        </a>
         <div className="nav-actions">
           <div className="nav-links">
             <a href="#home">About</a>
