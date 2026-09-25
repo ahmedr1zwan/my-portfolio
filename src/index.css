@@ -16,7 +16,7 @@
   --gradient-red: #963e3c;
   --gradient-gold: #89613b;
   --gradient-ink: #292f33;
-  --photo-frame: #fdfcf9;
+  --photo-frame: var(--page-bg);
   --control-bg: #f3f0e9;
 }
 :root[data-theme='dark'] {
@@ -34,7 +34,7 @@
   --gradient-red: #e6a49b;
   --gradient-gold: #e8c792;
   --gradient-ink: #eee5d7;
-  --photo-frame: #e3d8c3;
+  --photo-frame: var(--page-bg);
   --control-bg: #2b2a27;
 }
 
