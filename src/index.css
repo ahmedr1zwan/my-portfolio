@@ -138,7 +138,7 @@
 .experience-content h3 + p { font-size: 15px; font-weight: 400; color: var(--text-body); }
 .experience-content h3 + p + p { font-size: 13px; font-weight: 400; color: var(--text-muted); }
 .company-logo { flex: 0 0 72px; width: 72px; height: 54px; display: flex; align-items: center; justify-content: center; }
-.company-logo > div { width: 72px; height: 54px; padding: 5px; background: #f1f1ec; border-radius: 4px; }
+.company-logo > div { width: 72px; height: 54px; padding: 5px; background: transparent; border-radius: 4px; }
 /* Crop the supplied 800px square logo to its central wordmark without altering it. */
 .company-logo > .intact-logo { position: relative; width: 72px; height: auto; aspect-ratio: 648 / 300; padding: 0; overflow: hidden; background: #fff; }
 .intact-logo img { position: absolute; width: 123.4568%; max-width: none; height: auto; left: -11.7284%; top: -83.3333%; }
