@@ -92,7 +92,7 @@
 .social-links img { width: 16px; height: 16px; }
 .education { display: grid; grid-template-columns: 112px minmax(0, 1fr); margin-top: 28px; padding-top: 22px; gap: 8px 18px; border-top: 1px solid var(--line); }
 .education-logo { position: relative; grid-column: 1; grid-row: 2; align-self: stretch; }
-.education-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.education-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transform: translateY(-4px); }
 .education-description { grid-column: 2; grid-row: 2; }
 .education p { color: var(--text-body); font-size: 14px; line-height: 1.65; margin: 0; }
 .education p + p { margin-top: 5px; }
