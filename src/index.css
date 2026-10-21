@@ -57,6 +57,86 @@
 .theme-toggle svg { width: 18px; height: 18px; }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Theme change: light spreads from the toggle like a sunrise, and drains back into it like a sunset. */
+@property --theme-radius { syntax: '<length>'; inherits: false; initial-value: 0px; }
+:root { --theme-feather: 160px; --theme-ease: cubic-bezier(.55, .05, .25, 1); }
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+:root[data-theme-transition] .theme-toggle { view-transition-name: theme-toggle; }
+::view-transition-group(theme-toggle) { animation: none; z-index: 4; }
+::view-transition-old(theme-toggle) { animation: none; opacity: 0; }
+::view-transition-new(theme-toggle) { animation: none; }
+:root[data-theme-transition] .theme-toggle svg { animation: toggle-icon-rise 700ms cubic-bezier(.34, 1.4, .64, 1) both; }
+
+:root[data-theme-transition='sunrise']::view-transition-new(root),
+:root[data-theme-transition='sunset']::view-transition-old(root) {
+  --theme-mask: radial-gradient(circle at var(--theme-origin-x) var(--theme-origin-y), #000 calc(var(--theme-radius) - var(--theme-feather)), transparent var(--theme-radius));
+  -webkit-mask-image: var(--theme-mask);
+  mask-image: var(--theme-mask);
+}
+:root[data-theme-transition='sunrise']::view-transition-new(root) {
+  animation: theme-sunrise-reach 1150ms var(--theme-ease) both, theme-sunrise-glow 1500ms ease-out both;
+}
+:root[data-theme-transition='sunset']::view-transition-old(root) {
+  z-index: 2;
+  animation: theme-sunset-reach 1150ms var(--theme-ease) both, theme-sunset-glow 1150ms ease-in both;
+}
+:root[data-theme-transition='sunset']::view-transition-new(root) {
+  z-index: 1;
+  animation: theme-dusk-settle 1500ms ease-out both;
+}
+
+/* A warm band of light riding the edge of the reveal, like the glow along a horizon. */
+.theme-horizon {
+  --horizon-color: 240 178 106;
+  position: fixed; inset: 0; pointer-events: none; view-transition-name: theme-horizon;
+  background: radial-gradient(circle at var(--theme-origin-x) var(--theme-origin-y),
+    transparent calc(var(--theme-radius) - var(--theme-feather) * 1.1),
+    rgb(var(--horizon-color) / .5) calc(var(--theme-radius) - var(--theme-feather) * .5),
+    transparent calc(var(--theme-radius) + var(--theme-feather) * .1));
+}
+::view-transition-group(theme-horizon) { animation: none; z-index: 3; }
+::view-transition-new(theme-horizon) { animation: none; }
+:root[data-theme-transition='sunrise'] .theme-horizon {
+  animation: theme-sunrise-reach 1150ms var(--theme-ease) both, theme-horizon-fade 1150ms ease-in both;
+}
+:root[data-theme-transition='sunset'] .theme-horizon {
+  --horizon-color: 222 112 84;
+  animation: theme-sunset-reach 1150ms var(--theme-ease) both, theme-horizon-fade 1150ms ease-in both;
+}
+@keyframes theme-horizon-fade {
+  0%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes theme-sunrise-reach {
+  from { --theme-radius: 0px; }
+  to { --theme-radius: calc(var(--theme-reach) + var(--theme-feather)); }
+}
+@keyframes theme-sunset-reach {
+  from { --theme-radius: calc(var(--theme-reach) + var(--theme-feather)); }
+  to { --theme-radius: 0px; }
+}
+/* Golden-hour warmth on the new daylight that cools to the true palette. */
+@keyframes theme-sunrise-glow {
+  from { filter: sepia(.55) saturate(1.7) hue-rotate(-12deg) brightness(1.06); }
+  to { filter: none; }
+}
+/* The receding daylight burns amber as it sets. */
+@keyframes theme-sunset-glow {
+  from { filter: none; }
+  to { filter: sepia(.7) saturate(2) hue-rotate(-18deg) brightness(.9); }
+}
+/* A soft twilight haze on the night palette that lifts as it settles. */
+@keyframes theme-dusk-settle {
+  from { filter: brightness(1.22) saturate(.7) contrast(.92); }
+  to { filter: none; }
+}
+@keyframes toggle-icon-rise {
+  from { opacity: 0; transform: translateY(14px) rotate(-70deg) scale(.5); }
+  to { opacity: 1; transform: none; }
+}
 :root[data-theme='dark'] .social-links img,
 :root[data-theme='dark'] .education h2 img { filter: invert(1); }
 :root[data-theme='dark'] .education-logo { background: #f1f1ec; border-radius: 4px; padding: 4px; }
