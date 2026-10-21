@@ -53,9 +53,9 @@
 :root[data-theme='dark'] .nav-logo { filter: brightness(0) invert(1); }
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; color: var(--text-muted); }
 .nav-actions { display: flex; align-items: center; gap: 24px; }
-.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--control-bg); color: var(--text-primary); cursor: pointer; }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--text-primary); cursor: pointer; transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease; }
 .theme-toggle svg { width: 18px; height: 18px; }
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle:hover { background: var(--control-bg); border-color: var(--accent); color: var(--accent); }
 .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 /* Theme change: light spreads from the toggle like a sunrise, and drains back into it like a sunset. */
